@@ -3,6 +3,6 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "rz-piz",
+  "urlRandomness": "c3-pcr",
   "https": false
 }
