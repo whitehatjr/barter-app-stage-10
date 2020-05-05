@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import db from '../config';
 import MyHeader from '../components/MyHeader'
 
-export default class Exchange extends Component{
+export default class Exchange extends Component {
 
   constructor(){
     super()
@@ -37,7 +37,7 @@ export default class Exchange extends Component{
 
      })
 
-     await this.getIsExchangeRequest()
+     await this.getExchangeRequest()
      db.collection('users').where("username","==",userName).get()
    .then()
    .then((snapshot)=>{
@@ -104,7 +104,8 @@ export default class Exchange extends Component{
           })
         }
       })
-  })}
+  })
+}
 
   componentDidMount(){
     this.getExchangeRequest()
@@ -143,7 +144,7 @@ export default class Exchange extends Component{
       })
     })
 
-
+}
   sendNotification=()=>{
     //to get the first name and last name
     db.collection('users').where('username','==',this.state.userName).get()
@@ -172,7 +173,8 @@ export default class Exchange extends Component{
     })
   }
 
-  render(){
+  render()
+  {
     if (this.state.IsExchangeRequestActive === true){
       // status screen
       return(
@@ -197,7 +199,7 @@ export default class Exchange extends Component{
          </TouchableOpacity>
        </View>
      )
-      )
+
     }
     else {
       return(
@@ -239,7 +241,7 @@ export default class Exchange extends Component{
       )
     }
   }
-
+}
 
 const styles = StyleSheet.create({
   formTextInput:{
